@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: poshbaba
+  name: poshbaba
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: poshbaba
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: poshbaba
+    spec:
+      containers:
+      - image: busybox
+        name: busybox
+        resources: {}
+status: {}
